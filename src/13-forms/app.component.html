@@ -1,0 +1,27 @@
+<h2>Login Form</h2>
+
+<hr/>
+Username (valid): {{loginForm.controls['username'].valid}} <br/>
+Username (invalid): {{loginForm.controls['username'].invalid}} <br/>
+Username (errors): {{!!loginForm.controls['username'].errors}} <br/>
+Username (errors-required): {{!!loginForm.controls['username'].errors && !!loginForm.controls['username'].errors['required']}} <br/>
+Username (errors-minlength): {{!!loginForm.controls['username'].errors && !!loginForm.controls['username'].errors['minlength']}} <br/>
+
+Username (dirty): {{loginForm.controls['username'].dirty}} <br/>
+Username (pristine): {{loginForm.controls['username'].pristine}} <br/>
+
+<hr/>
+
+<p class="error">{{message}}</p>
+<form [formGroup]="loginForm">
+    Username: <input formControlName="username" /><br/>
+    <span class="error" *ngIf="loginForm.controls['username'].dirty">
+        <span *ngIf="!!loginForm.controls['username'].errors && !!loginForm.controls['username'].errors['required']">Username can not be empty</span>
+        <span *ngIf="!!loginForm.controls['username'].errors && !!loginForm.controls['username'].errors['minlength']">Minimum chars required - 5</span>
+        <br/>
+    </span>
+    Password: <input formControlName="password" /><br/>
+
+    <br/><br/>
+    <button [disabled]="loginForm.invalid" type="button" (click)="getLogin()">Login</button>
+</form>

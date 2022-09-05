@@ -1,0 +1,59 @@
+<p *ngIf="books.length==0">Books List is empty</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<app-alert-modal [error]="alertCls" [errorMsg] = "alertMsg" *ngIf="showAlert"></app-alert-modal>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 bg-light text-right">
+            <button type="button" (click)="searchBooks()" class="btn btn-warning">Search Books</button>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="books.length>0">
+  <h2>Books List</h2>
+  <div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>ReleasedDate</th>
+        <th>active</th>
+        <th>Subscribe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.releasedDate}}</td>
+        <td>{{book.active}}</td>
+        <td><button class="btn btn-primary" (click)="subscribeBook(book.id,book.title)">Subscribe</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</body>
+</html>
+
+
+    

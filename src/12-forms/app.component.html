@@ -1,0 +1,7 @@
+<form [formGroup]="loginForm">
+    Username: <input formControlName="user" /> <br/>
+    Password: <input formControlName="pwd" /> <br/>
+    <button type="button" (click)="getLogin()">Login</button>
+</form>
+
+{{this.loginForm.valid}}

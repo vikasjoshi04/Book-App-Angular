@@ -1,0 +1,28 @@
+<!-- <p class="error">{{message}}</p> -->
+<app-alert-modal [error]="alertCls" [errorMsg] = "alertMsg" *ngIf="showAlert"></app-alert-modal>
+<form [formGroup]="loginForm" style="margin: auto; width: 300px;">
+    <div class="form-group">
+        <h3>Login </h3>
+        <label for="email">Username:</label>
+        <input class="form-control" formControlName="username" /><br/>
+        <span class="error" style="color: red" *ngIf="loginForm.controls['username'].dirty">
+            <span *ngIf="!!loginForm.controls['username'].errors && !!loginForm.controls['username'].errors['required']">Username can not be empty</span>
+            <span *ngIf="!!loginForm.controls['username'].errors && !!loginForm.controls['username'].errors['minlength']">Minimum chars required - 5</span>
+            <!-- <br/> -->
+        </span>
+      </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" formControlName="password" />
+        <span class="error" style="color: red" *ngIf="loginForm.controls['password'].dirty">
+          <span *ngIf="!!loginForm.controls['password'].errors && !!loginForm.controls['password'].errors['required']">Password can not be empty</span>
+        </span>
+      </div>
+    <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Remember me
+        </label>
+    </div>
+    <br/><br/>
+    <button class="btn btn-primary" [disabled]="loginForm.invalid" type="button" (click)="getLogin()">Login</button>
+</form>

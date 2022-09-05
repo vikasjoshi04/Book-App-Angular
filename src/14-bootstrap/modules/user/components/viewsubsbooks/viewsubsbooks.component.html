@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<app-alert-modal [error]="alertCls" [errorMsg] = "alertMsg" *ngIf="showAlert"></app-alert-modal>
+<div class="container">
+  <form #readerDetail="ngForm" (ngSubmit) = "fetchSubscribedBooks(readerDetail.value)" style="margin: auto; width: 500px;">
+    <label style="color: rgb(36, 169, 221)" >Provide Reader Details :</label>
+    <div class="form-group">
+    <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ngModel = "{{defEmail}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+<!-- <p class="col-md-12 bg-light text-left" style="color: red" *ngIf="books.length==0">Reader has not Subscribed Books</p> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container" *ngIf="books.length>0">
+  <h2>Subscribed Books List</h2>
+  <div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Publisher</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>ReleasedDate</th>
+        <th>active</th>
+        <th>Read</th>
+        <th>Un-Subscribe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.releasedDate}}</td>
+        <td>{{book.active}}</td>
+        <td><button class="btn btn-primary" (click)="readBookContent(book.id)">Read</button></td>
+        <td><button class="btn btn-primary" (click)="unSubscribedBooks(book.id)">Un-Subscribe</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+</body>
+</html>
+
+
+    

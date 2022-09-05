@@ -1,0 +1,7 @@
+Subject: <u>{{subject}}</u>
+<br/>
+
+<!-- Enter new subject: <input #ele (change)="changeSubject(ele.value)" /> -->
+Enter new subject: <input #ele [value]="subject" />
+
+<button (click)="changeSubject(ele.value)">Change</button>

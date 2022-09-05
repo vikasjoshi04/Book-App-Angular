@@ -1,0 +1,6 @@
+<div>
+    <input #n1 placeholder="Enter num" type="number" />
+    <input #n2 placeholder="Enter num" type="number" />
+    <button (click)="addNumber(+n1.value, +n2.value)">Add</button>
+    <h2>Result: {{result}}</h2>
+</div>

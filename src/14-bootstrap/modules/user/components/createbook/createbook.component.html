@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+<body>
+  <app-alert-modal [error]="alertCls" [errorMsg] = "alertMsg" *ngIf="showAlert"></app-alert-modal>
+<div class="container">
+  <h2>Create Books</h2>
+  <form #bookDetail="ngForm" (ngSubmit) = "createBook(bookDetail.value)">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" required placeholder="Enter title" id="title" name="title" ngModel>
+    </div>
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <input type="text" class="form-control" id="category" placeholder="Enter category" name="category" ngModel>
+    </div>
+      
+    <div class="form-group">
+      <label for="publisher">Publisher:</label>
+      <input type="text" class="form-control" id="publisher" placeholder="Enter publisher" name="publisher" ngModel>
+    </div>
+
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="text" class="form-control" id="price" placeholder="Enter price" name="price" ngModel>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Content:</label>
+        <input type="text" class="form-control" id="content" placeholder="Enter content" name="content" ngModel>
+    </div>
+
+    <div class="form-group">
+        <label for="releasedDate">Released Date:</label>
+        <input type="date" class="form-control" id="releasedDate" placeholder="Enter releasedDate" name="releasedDate" ngModel>
+      </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>
+</body>
+</html>
