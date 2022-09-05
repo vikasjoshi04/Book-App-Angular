@@ -37,7 +37,7 @@ export class AllbooksComponent {
               console.log("some error happened")
               console.log(err)
               this.showAlert = true;
-              this.alertCls = "success";
+              this.alertCls = "danger";
               this.alertMsg = "Books list not fetched";
           }
       })
