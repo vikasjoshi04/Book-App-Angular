@@ -6,13 +6,20 @@ import { Injectable } from '@angular/core';
 })
 export class ReaderService {
 
-  gettAllBooks: string = "http://localhost:9090/api/v1/reader/books";
-  getBooksUsingFilter : string = "http://localhost:9090/api/v1/reader/books/search";
-  buyBooks : string = "http://localhost:9090/api/v1/reader/books/buy"
-  refundBooks : string = "http://localhost:9090/api/v1/reader/";
-  getAllSubsBooks: string = "http://localhost:9090/api/v1/reader/";
-  readBook: string = "http://localhost:9090/api/v1/reader/";
-  getAllBooksActiveNon: string = "http://localhost:9090/api/v1/reader/books/all-books";
+  // gettAllBooks: string = "http://localhost:9090/api/v1/reader/books";
+  // getBooksUsingFilter : string = "http://localhost:9090/api/v1/reader/books/search";
+  // buyBooks : string = "http://localhost:9090/api/v1/reader/books/buy"
+  // refundBooks : string = "http://localhost:9090/api/v1/reader/";
+  // getAllSubsBooks: string = "http://localhost:9090/api/v1/reader/";
+  // readBook: string = "http://localhost:9090/api/v1/reader/";
+  // getAllBooksActiveNon: string = "http://localhost:9090/api/v1/reader/books/all-books";
+  gettAllBooks: string = "http://35.92.21.142:9090/api/v1/reader/books";
+  getBooksUsingFilter : string = "http://35.92.21.142:9090/api/v1/reader/books/search";
+  buyBooks : string = "http://35.92.21.142:9090/api/v1/reader/books/buy"
+  refundBooks : string = "http://35.92.21.142:9090/api/v1/reader/";
+  getAllSubsBooks: string = "http://35.92.21.142:9090/api/v1/reader/";
+  readBook: string = "http://35.92.21.142:9090/api/v1/reader/";
+  getAllBooksActiveNon: string = "http://35.92.21.142:9090/api/v1/reader/books/all-books";
 
   u:any = {
     id: "",
