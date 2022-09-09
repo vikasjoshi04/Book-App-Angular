@@ -15,7 +15,7 @@ export class ReaderService {
   // getAllBooksActiveNon: string = "http://localhost:9090/api/v1/reader/books/all-books";
   gettAllBooks: string = "https://o0u75shtti.execute-api.us-west-2.amazonaws.com/api/v1/reader/books";
   getBooksUsingFilter : string = "https://o0u75shtti.execute-api.us-west-2.amazonaws.com/api/v1/reader/books/search";
-  buyBooks : string = "https://o0u75shtti.execute-api.us-west-2.amazonaws.com/api/v1/reader/books/buy"
+  buyBooks : string = "http://35.92.21.142:9090/api/v1/reader/books/buy"
   refundBooks : string = "http://35.92.21.142:9090/api/v1/reader/";
   getAllSubsBooks: string = "http://35.92.21.142:9090/api/v1/reader/";
   readBook: string = "http://35.92.21.142:9090/api/v1/reader/";
