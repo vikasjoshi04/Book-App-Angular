@@ -9,10 +9,10 @@ export class AuthorService {
   // updateUrl : string = "http://localhost:9090/api/v1/author/";
   // authenticateUrl: string = "http://localhost:9090/api/v1/author/authenticate";
   // signUpUrl : string = "http://localhost:9090/api/v1/author/signup";
-  crateUrl: string = "http://35.92.21.142:9090/api/v1/author/";
-  updateUrl : string = "http://35.92.21.142:9090/api/v1/author/";
-  authenticateUrl: string = "http://35.92.21.142:9090/api/v1/author/authenticate";
-  signUpUrl : string = "http://35.92.21.142:9090/api/v1/author/signup";
+  crateUrl: string = "http://35.91.147.161:9090/api/v1/author/";
+  updateUrl : string = "http://35.91.147.161:9090/api/v1/author/";
+  authenticateUrl: string = "http://35.91.147.161:9090/api/v1/author/authenticate";
+  signUpUrl : string = "http://35.91.147.161:9090/api/v1/author/signup";
 
   constructor(private http : HttpClient) { }
 
