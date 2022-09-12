@@ -13,13 +13,16 @@ export class ReaderService {
   // getAllSubsBooks: string = "http://localhost:9090/api/v1/reader/";
   // readBook: string = "http://localhost:9090/api/v1/reader/";
   // getAllBooksActiveNon: string = "http://localhost:9090/api/v1/reader/books/all-books";
+  // Lambda
+  //gettAllBooks: string = "https://9uo57uvbw0.execute-api.us-west-2.amazonaws.com/default/javademo";
+  // APi Gateway
   gettAllBooks: string = "https://o0u75shtti.execute-api.us-west-2.amazonaws.com/api/v1/reader/books";
   getBooksUsingFilter : string = "https://o0u75shtti.execute-api.us-west-2.amazonaws.com/api/v1/reader/books/search";
-  buyBooks : string = "http://35.91.147.161:9090/api/v1/reader/books/buy"
-  refundBooks : string = "http://35.91.147.161:9090/api/v1/reader/";
-  getAllSubsBooks: string = "http://35.91.147.161:9090/api/v1/reader/";
-  readBook: string = "http://35.91.147.161:9090/api/v1/reader/";
-  getAllBooksActiveNon: string = "http://35.91.147.161:9090/api/v1/reader/books/all-books";
+  buyBooks : string = "http://54.212.211.121:9090/api/v1/reader/books/buy"
+  refundBooks : string = "http://54.212.211.121:9090/api/v1/reader/";
+  getAllSubsBooks: string = "http://54.212.211.121:9090/api/v1/reader/";
+  readBook: string = "http://54.212.211.121:9090/api/v1/reader/";
+  getAllBooksActiveNon: string = "http://54.212.211.121:9090/api/v1/reader/books/all-books";
 
   u:any = {
     id: "",
